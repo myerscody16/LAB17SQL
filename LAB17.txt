@@ -1,0 +1,19 @@
+SELECT * FROM Customers
+SELECT * FROM Customers WHERE City IN ('London','Paris')
+SELECT DISTINCT City FROM Customers WHERE City IS NOT NULL
+SELECT FirstName FROM Employees ORDER BY FirstName desc
+SELECT AVG(Salary) FROM Employees **no salary
+SELECT FirstName, LastName FROM Employees WHERE Salary=MAX(Salary) **no salary
+SELECT * FROM Employees WHERE Notes LIKE '% BA %'
+SELECT UnitPrice * Quantity * (1 - Discount) AS 'Total' FROM [Order Details] WHERE Discount<>0
+SELECT FirstName, LastName FROM Employees WHERE HireDate>'1/1/1994'
+SELECT DATEDIFF(year, HireDate , '2019') AS 'Total years worked' FROM Employees
+SELECT ProductName FROM Products ORDER BY quantity asc **quantity is not a column
+SELECT ProductName FROM Products ORDER BY quantity desc **quantity is not a column
+SELECT ProductName FROM [Products] WHERE UnitsInStock<6
+SELECT ProductName FROM Products WHERE Discontinued = 'True'
+SELECT ProductName FROM Products WHERE ProductName LIKE '%tofu%'
+SELECT MAX(UnitPrice) FROM Products
+SELECT * FROM Employees WHERE HireDate > '1993/1/1'
+SELECT * FROM Employees WHERE TitleOfCourtesy = 'Mrs.' OR TitleOfCourtesy = 'Ms.'
+SELECT * FROM Employees WHERE HomePhone LIKE '%206%'
